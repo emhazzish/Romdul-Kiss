@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romdul Kiss - Traditional Khmer Cuisine</title>
+    <style>
+        /* Color Scheme: Gold and Yellow */
+        :root {
+            --gold: #e7b81c;
+            --yellow: #ffe449;
+            --dark-gold: #c59a2e;
+            --light-bg: #fff29d;
+            --text-dark: #000000;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--gold);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: right;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://grantourismotravels.com/wp-content/uploads/2017/08/Cambodian-Food-Sugar-Palm-Siem-Reap-Copyright-2022-Terence-Carter-Grantourismo-T.jpg');
+            background-size: cover;
+            color: var(--light-bg);
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 40px;
+        }
+
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+ nav {
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, links right */
+    align-items: center;
+    padding: 0 60px;
+    background-color: var(--gold);
+    height: 120px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo{
+    height: 165px;
+    width: auto;
+    align-items: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1); /* Fun hover effect */
+}
+
+.nav-links a{
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+        #about {
+           border: 5px solid var(--gold); /* 5px thick, solid line, gold color */
+           border-radius: 20px;          /* Optional: rounds the corners */
+           margin: 30px auto;          /* Adds space outside the border */
+          }
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            padding: 10px;
+        }
+
+        .menu-item {
+            background: white;
+            border: 5px solid var(--gold);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        /* The Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Black dim effect */
+}
+
+.menu-item img {
+    cursor: pointer; /* Shows it is clickable */
+}
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .menu-item h3 {
+            color: var(--dark-gold);
+            padding:  15px 5px 15px 5px;
+            margin:0px;
+        }
+        .menu-item p {
+            padding: 0 20px 20px;
+            color: #c79f1c;
+            font-style: italic;
+        }
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            max-width: 900px;
+            padding: 60px;
+            border-radius: 20px;
+            border: 3px goldenrod;
+            margin: auto;
+        }
+
+        input, textarea, button {
+            padding: 20px;
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+     
+        /* Location Layout */
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.location-card {
+    background: white;
+    border: 4px solid var(--gold); /* Your signature gold border */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.location-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.location-card h2 {
+    color: var(--dark-gold);
+    margin-top: 0;
+    border-bottom: 2px solid var(--yellow);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Map Button */
+.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--gold);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    background-color: var(--dark-gold);
+}
+
+        button {
+            background-color: var(--gold);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: var(--dark-gold);
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid var(--gold);
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+ <nav>
+    <!-- Logo on the left -->
+        <a href="#logo" class="nav-logo">
+        <img src="https://i.ibb.co/3989tTkz/Your-paragraph-text-1.png" alt="Romdol Kiss"><border="0" /></a>
+
+    <!-- Links on the right -->
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+    <!-- HOME PAGE -->
+    <header id="home">
+        <h1>Romdul Kiss</h1>
+        <p>A Taste of Cambodia's Royal Flower</p>
+    </header>
+  
+    <section>
+        <h1 style="text-align: center; color: var(--dark-gold);">Our Traditional Specialties</h1>
+        <div class="menu-grid">
+            <!-- row 1 -->
+            <div class="menu-item" onclick="openVideo('https://www.youtube.com/embed/mlngdPqXi10?si=lROAcki1r4wS7j06')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToO0vrd6QN6512NK3gTw9jcZlsoOED97guTg&s" alt="Fish Amok">
+                <h3>Traditional Fish Amok</h3>
+                <p>Steamed fish curry in banana leaf</p>
+                <p> Click here for the recipe !</p>
+            </div>
+            <!-- Beef Lok Lak -->
+            <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/KSNG7aVSKIM?si=Gza27sT1CV1QAUDn')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihqnXbuzXgbsQOzbSiCtKlqZqutmUlkPZLg&s" alt="Beef Lok Lak">
+                <h3>Khmer Beef Lok Lak</h3>
+                <p>Stir-fried beef with lime and pepper sauce</p>
+                <p>click here for the recipe!</p>
+            </div>
+            <!-- Nom Banh Chok -->
+            <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/regiflNIs-0?si=qbO7zuG6VSPJKwJE')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ai2GzO48dw_04Xztj2LtKqRWbV5hPpw9Jw&s" alt="Nom Banh Chok">
+                <h3>Nom Banh Chok</h3>
+                <p>Traditional Khmer rice noodles</p>
+                <p>click here for the recipe!</p>
+            </div>
+          
+                <!--row 2-->
+                  <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/HPfR51Fq0jU?si=YSJaxPMUIcaPSveD')">
+                <img src="https://blog.takemetour.com/wp-content/uploads/2019/03/Currysaraman-1.jpg" alt="Curry Soup">
+                <h3>Curry Soup</h3>
+                <p>Traditional Khmer curry Soup</p>
+                <p>click here for the recipe!</p>
+                  </div>
+                <!--Chicken roated red wine-->
+                    <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/hJswLfXL_GA?si=c9DkSq9egyOOab5X')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7rl1sDANyYBmXepWbwSymYYroQDasXt3Bhg&s" alt="Roasted red wine Chicken">
+                <h3>Roasted red wine Chicken</h3>
+                <p>Roasted red wine Chicken</p>
+                <p>click here for the recipe!</p>
+                    </div>
+                <!--nom ansom-->
+                      <div class="menu-item"onclick= "openVideo('https://www.youtube.com/embed/HrdpphGm_oc?si=4Jx8UnITQifmqGPs')">
+                <img src="https://thumbs.dreamstime.com/b/num-ansom-chek-banana-sticky-rice-cake-cambodian-cuisine-close-up-view-traditional-dessert-featuring-wrapped-376830104.jpg" alt="Nom Ansom">
+                <h3>Nom Ansom</h3>
+                <p>Traditional Khmer rice dessert</p>
+                <p>click here for the recipe!</p>
+            </div>
+              <!--bay sraob-->
+                  <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/sa0inXURh90?si=RevGqziKWV1DiL6g')">
+                <img src="https://media.cnn.com/api/v1/images/stellar/prod/191122151358-4-bai-sach-chrouk-lina-goldberg.jpg?q=w_1110,c_fill"alt="Bay Srob">
+                <h3>Bay Srob</h3>
+                <p>Cambdian Regular Breakfast</p>
+                <p>click here for the recipe!</p>
+                </div>
+                  <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/6EYnM2lxjl8?si=ygfBgO40WqLxWxSL')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwDLC8k6RRuJrvxqQ0eRJ-LqK9d-Am4HJNkw&s"alt="Roasted Crab">
+                <h3>Roasted Crab</h3>
+                <p>Cambdian Seafood</p>
+                <p>click here for the recipe!</p>
+                </div>
+                <div class="menu-item"onclick="openVideo('https://www.youtube.com/embed/Puq9QxZlM0I?si=5PoSvAGiHBahR15K')">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7eTrJmNRy0Vpcsz9u0kD_Ws27cWZmV9rEtX5p-ahSuEDt0JJKMXPgud6459q_QGpSvXAa88vCajc-7PUaUI9IG5iGxC5U6_RDPHfovOwswXgANqM2mnX3HTYFphyu1f65vPvYAhiSBtEs/s400/khor+trey+swey+kchey.jpg"alt="Khor Trey Swey Kchey">
+                <h3>Khor Trey Swey Kchey</h3>
+                <p>Cambdian Khor Trey</p>
+                <p>click here for the recipe!</p>
+          </div>
+      </section>
+<!-- LOCATIONS SECTION -->
+<section id="location">
+    <h1 style="font-size: 4rem; text-align: center; color: #c59a2e;">Top picks for Resturants</h1>
+    <div class="location-grid">
+        <!-- Location 1 -->
+        <div class="location-card">
+            <h2>Elven One Kitchen-BKK1</h2>
+            <p>📍#20 Street 334 BKK1, Phnom Penh Cambodia</p>
+            <p>📞 +855 12 345 678</p>
+            <p>⏰ Open Daily: 7:00 AM - 9:00 PM</p>
+            <a href="https://www.google.com/maps/place/eleven+one+kitchen+-+bkk1/data=!4m2!3m1!1s0x310951241139ee63:0xe367aa8b9c37ce64?sa=X&ved=1t:242&ictx=111" target="_blank" class="map-btn">View on Google Maps</a>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="location-card">
+            <h2>Aura- Phnom Penh</h2>
+            <p>📍 9-14 St 308 3rd And 4th Floor, The Corner Building, Bassac Lane, Phnom Penh 12301 Cambodia</p>
+            <p>📞 +855 98 765 432</p>
+            <p>⏰ Open Daily: 11:00 AM- 1:00 AM</p>
+            <a href="https://www.google.com/maps/place/aura+phnom+penh/data=!4m2!3m1!1s0x3109512fcec13b39:0xe0ab8387945c330a?sa=X&ved=1t:242&ictx=111" target="_blank" class="map-btn">View on Google Maps</a>
+        </div>
+         <div class="location-card">
+            <h2>Malis</h2>
+            <p>📍 Phnom, 136 Norodom Blvd, Penh 12301</p>
+            <p>📞 +855 98 765 432</p>
+            <p>⏰ Open Daily: 6:30 AM- 10:00 PM</p>
+            <a href="https://www.google.com/maps/place/malis+phnom+penh/data=!4m2!3m1!1s0x3109512fdb27a025:0xba9dd2cbcb3609cd?sa=X&ved=1t:242&ictx=111" target="_blank" class="map-btn">View on Google Maps</a>
+        </div>
+    </section> 
+    <!-- ABOUT PAGE -->
+    <section id="about" style="background-color: #fdff9c; font-size: 20px;">
+        <h2 style="color: var(--dark-gold);">About Romdul Kiss</h2>
+        <p> after the national flower of Cambodia, <strong>Romdul Kiss</strong> brings the authentic flavors of the Khmer Empire to your table. We use traditional "Kroeung" spice pastes and fresh, locally sourced ingredients to ensure every bite is a tribute to our rich heritage.
+        Enjoy the flavors of wonders in Cambodia through our Cambodian Cuisine. This Cusisine serves not only traditional food made with local ingredients but also the, <italic>sweat and tears</italic> of our personal chef. Using Special sauces and spices into crafting the most delcious 
+        and memorable taste for our dear lovley customers. </p>
+        <h2 style="color: var(--dark-gold);">Our Mission</h2>
+        <p>"At Romdul Kiss, our mission is to be the living fragrance of Cambodian hospitality. Just as the Romdul flower graces the Kingdom with its timeless scent, we strive to enchant our guests through the authentic artistry of Khmer cuisine. 
+          We are dedicated to preserving ancestral recipes, sourcing the finest local ingredients, and serving every dish with the grace and warmth of the Cambodian spirit—bringing the heart of our heritage to your table, one 'kiss' of flavor at a time." </p>
+        <h2 style="color: var(--dark-gold);">Our Service</h2>
+        <p> In this website we offer free recipes tutorials and request for more traditional recipes not only from our contry 
+          but from others as well! We are excited to showcase the amazing kitchen skills with everyone. Our service can include 
+          Free Recipes to make and home or Reservation at our Cuisine is also possible!
+        </p>
+        </section>
+
+
+    <!-- CONTACT PAGE -->
+    <section id="contact">
+        <h1 style="text-align: center; color: var(--dark-gold); font-size: 50px ;">Contact Us</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="phone number" placeholder="Your Phone Number" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Romdul Kiss Restaurant | Phnom Penh, Cambodia</p>
+    </footer>
+      <div id="videoModal" class="modal" onclick="closeVideo()">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <iframe id="videoPlayer" width="100%" height="450" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+<script>
+        function openVideo(videoUrl) {
+            document.getElementById('videoModal').style.display = "block";
+            // Autoplay is added to ensure the video starts immediately
+            document.getElementById('videoPlayer').src = videoUrl + "?autoplay=1";
+        }
+        function closeVideo() {
+            document.getElementById('videoModal').style.display = "none";
+            document.getElementById('videoPlayer').src = ""; // Stops the video
+        }
+    </script>
+
+</body>
+</html>
